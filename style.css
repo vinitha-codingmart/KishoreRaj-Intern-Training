@@ -74,16 +74,21 @@ html {
 }
 
 .languageMenu {
+    z-index: 1;
+    position: absolute;
     width: 275px;
     height: 180px;
     border: 1px solid;
     display: none;
+    top: 50px;
+    right: 180px;
 }
 
 
 .languages {
     display: flex;
     flex-wrap: wrap;
+    background-color: white;
 }
 
 
@@ -106,6 +111,7 @@ html {
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #f3f3f3;
+    cursor: pointer;
 }
 
 div.language:hover {
