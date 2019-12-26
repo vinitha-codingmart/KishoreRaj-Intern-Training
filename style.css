@@ -3,14 +3,18 @@ html {
     line-height: 1.2;
 }
 
+body {
+    position: relative;
+    top: -8px;
+}
 
 .layoutContainer {
     min-height: 100vh;
     width: 100%;
-    position: relative; 
+    position: relative;
 }
 
-.wholeContentWrapper{
+.wholeContentWrapper {
     display: flex;
     flex-wrap: wrap;
 }
@@ -18,6 +22,7 @@ html {
 .header {
     width: 100%;
     display: flex;
+    margin-top: 0px;
 }
 
 .leftHeader {
@@ -32,22 +37,25 @@ html {
     align-items: center;
     width: 50% !important;
     height: 100%;
+    justify-content: flex-end;
+    padding: 0px 50px 0px 0px;
 }
 
 .logo {
     width: 86px;
-    height: 36px;
+    height: 55px;
     background-color: white;
+    padding: 0px 0px 0px 80px;
 }
 
 .promoCard {
     display: flex;
     align-items: center;
-    border: 1px solid #eee; 
-    height: 100%;
+    border: 1px solid #eee;
     justify-content: center;
     padding: 0 5px;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .icon {
@@ -57,20 +65,25 @@ html {
 
 .chooseLanguage {
     display: flex;
-    position: relative;
+    justify-content: center;
     align-items: center;
     outline: none;
     cursor: pointer;
     border: 1px solid #eee;
     height: 100%;
     padding: 0 20px;
-    cursor: pointer;
+    width: 136.6px;
+    height: 75px;
+    margin-top: 0px;
+}
+
+div.chooseLanguage:hover {
+    background-color: #f3f3f3;
 }
 
 .languageIcon {
     height: 24px;
     width: 24px;
-    
 }
 
 .languageMenu {
@@ -80,10 +93,9 @@ html {
     height: 180px;
     border: 1px solid;
     display: none;
-    top: 50px;
+    top: 80px;
     right: 180px;
 }
-
 
 .languages {
     display: flex;
@@ -91,15 +103,9 @@ html {
     background-color: white;
 }
 
-
-.languageLarge {
-   color: rgba(0, 0, 0, .87);
-   font-size: 14px;
-}
-
 .languagesSmall {
-    color: rgba(0, 0, 0, .7); 
-    margin-top: 4px; 
+    color: rgba(0, 0, 0, .7);
+    margin-top: 4px;
     font-size: 12px;
 }
 
@@ -116,4 +122,149 @@ html {
 
 div.language:hover {
     background-color: #f3f3f3;
+}
+
+.loginOrSignup {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    margin: 0px 0px 0px 20px;
+    padding: 0px 20px 0px 4px;
+}
+
+div.loginOrSignup:hover {
+    background-color: #f3f3f3;
+}
+
+.navbar {
+    width: 100%;
+    height: 42px;
+    align-items: center;
+    background-color: #f3f5f7;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    margin-top: 0;
+    padding: 2px 60px 0 !important;
+}
+
+.navbarRow {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+}
+
+.navbarList {
+    height: 100%;
+}
+
+.cities {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;    
+    transition: .1s;
+}
+
+.city {
+    height: 100%;
+    position: relative;
+    display: flex;
+    transition: .1s;
+}
+
+.cityName {
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 14px;
+    width: 100%;
+    transition: .1s;
+}
+
+.link {
+    color: inherit;
+}
+
+a {
+    background-color: transparent;
+}
+
+.cityData {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text {
+    font-size: 14px;
+}
+
+
+.arrow {
+    display: inline-block;
+    width: 6px;
+    margin-left: 8px;
+    transform: rotate(0deg);
+    transition: transform .3s ease
+}
+
+.city:hover .arrow {
+
+    transform: rotate(180deg);
+    transition: transform .3s ease;
+}
+
+.arrow:before {
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.arrow:before, 
+.arrow:after {
+    background: rgba(0, 0, 0, .54);
+    content: "";
+    height: 7px;
+    position: absolute;
+    top: -4px;
+    width: 1px;
+}
+
+.arrow:after {
+    right: 0;
+    transform: rotate(45deg);
+}
+
+.cityName {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.cityData h2 {
+    font-weight: 400;
+    color: rgba(0, 0, 0, .7);
+    margin: 0;    
+}
+
+.all {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.all:hover {
+    color: red;
 }
