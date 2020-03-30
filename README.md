@@ -1,1 +1,1 @@
-# A Simple Red Bus Web Application using HTML, CSS and JS.
+A simple Red Bus website using JavaScript!
